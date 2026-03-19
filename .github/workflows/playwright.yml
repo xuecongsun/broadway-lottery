@@ -41,7 +41,7 @@ jobs:
           DOB_YEAR: ${{ secrets.DOB_YEAR }}
           ZIP: ${{ secrets.ZIP }}
           COUNTRY: ${{ secrets.COUNTRY }}
-        run: xvfb-run npx playwright test
+        run: xvfb-run npx playwright test --config=playwright.config.ts
 
       - name: Upload Playwright report
         if: always()
